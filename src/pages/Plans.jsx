@@ -6,7 +6,7 @@ const Plans = () => {
     
 
   return (
-    <div className='flex flex-row ml-40'>
+    <div className='flex lg:flex-row sm:flex-col  lg:ml-40'>
       
       <Sidebar />
       <PlansComponent />

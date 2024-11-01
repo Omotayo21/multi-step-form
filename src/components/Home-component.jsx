@@ -58,38 +58,77 @@ const HomeComponent = () => {
 
 
   return (
-    <div>
-       <div className='flex flex-col space-x-8 ml-24  '>
-      
-      <div className='mt-36 mb-12 ml-8'>
-       <h2 className='lg:text-2xl text-blue-700 font-bold sm:text-[2.4]'>Personal info</h2>
-       <p className='text-gray-300'>Please provide your name, email address, and phone number</p>
-       
-       </div>
-         <div className='flex flex-row'><label htmlFor='id' className='text-blue-400 '>Name</label>{nameError && <p className="text-red-500 pl-48 text-sm">{nameError}</p>}</div>
-        <input className={`w-96 border-solid border border-gray-200 cursor-pointer hover:border-blue-700 py-[0.65rem] px-4 mb-8 rounded-[0.8rem] placeholder:text-grey text-blue-600 focus:outline-none  ${nameError && 'border-red-500'} `}
-        placeholder='e.g rahman'
-        name="name"
-        value={formData.name}
-        onChange={handleInputChange}/>  
-         <div className='flex flex-row'><label htmlFor='id' className='text-blue-400 '>Email adress</label>{emailError && <p className="text-red-500 pl-20 text-sm">{emailError}</p>}</div>
-        <input className={`w-96 border-solid border border-gray-200 cursor-pointer hover:border-blue-700 rounded-[0.8rem] py-[0.65rem] px-4  mb-8 placeholder:text-grey text-blue-600 focus:outline-none ${emailError && 'border-red-500'}`}
-        placeholder='e.g rahman@gmail.com'
-       name='email'
-        value={formData.email}
-        onChange={handleInputChange}/>  
-           <div className='flex flex-row'><label htmlFor='id' className='text-blue-400 '>Phone number</label>{numberError && <p className="text-red-500 pl-20 text-sm">{numberError}</p>}</div>
-        <input className={`w-96 border-solid border border-gray-200 cursor-pointer hover:border-blue-700 rounded-[0.8rem] py-[0.65rem] px-4 mb-8 placeholder:text-grey text-blue-600 focus:outline-none  ${numberError && 'border-red-500'}`}
-        placeholder='e.g +234 574899'
-         value={formData.number}
-         name='number'
-        onChange={handleInputChange}/>
-        <div className='self-end mr-36'>  
-       <button className='rounded bg-blue-700 text-white py-5 px-2 w-16 ' onClick={handleNext}> NEXT</button> </div>
+    <div className="flex flex-col lg:w-full lg:space-x-8 lg:ml-16  sm:px-2 sm:max-w-screen-sm sm:rounded-md sm:bg-white sm:-mt-28 ">
+      <div className="lg:mt-20 mb-12 lg:ml-8">
+        <h2 className="lg:text-2xl text-blue-700 font-bold sm:text-[2.4]">
+          Personal info
+        </h2>
+        <p className="text-gray-300">
+          Please provide your name, email address, and phone number
+        </p>
+      </div>
+      <div className="mb-6">
+        <div className="flex flex-row">
+          <label htmlFor="id" className="text-blue-400 ">
+            Name
+          </label>
+        </div>
+        <input
+          className={`lg:w-96 border-solid border border-gray-200 cursor-pointer hover:border-blue-700 py-[0.65rem] px-4 rounded-[0.8rem] placeholder:text-grey text-blue-600 focus:outline-none  ${
+            nameError && "border-red-500"
+          } `}
+          placeholder="e.g rahman"
+          name="name"
+          value={formData.name}
+          onChange={handleInputChange}
+        />
+        {nameError && <p className="text-red-500  text-sm">{nameError}</p>}
+      </div>
+      <div className="mb-6">
+        <div className="flex flex-row">
+          <label htmlFor="id" className="text-blue-400 ">
+            Email adress
+          </label>
+        </div>
+        <input
+          className={`lg:w-96 border-solid border border-gray-200 cursor-pointer hover:border-blue-700 rounded-[0.8rem] py-[0.65rem] px-4  placeholder:text-grey text-blue-600 focus:outline-none ${
+            emailError && "border-red-500"
+          }`}
+          placeholder="e.g rahman@gmail.com"
+          name="email"
+          value={formData.email}
+          onChange={handleInputChange}
+        />
+        {emailError && <p className="text-red-500  text-sm">{emailError}</p>}
+      </div>
+      <div className="mb-6">
+        <div className="flex flex-row">
+          <label htmlFor="id" className="text-blue-400 ">
+            Phone number
+          </label>
+        </div>
+        <input
+          className={`lg:w-96 border-solid border border-gray-200 cursor-pointer hover:border-blue-700 rounded-[0.8rem] py-[0.65rem] px-4  placeholder:text-grey text-blue-600 focus:outline-none  ${
+            numberError && "border-red-500"
+          }`}
+          placeholder="e.g +234 574899"
+          value={formData.number}
+          name="number"
+          onChange={handleInputChange}
+        />
+        {numberError && <p className="text-red-500 text-sm">{numberError}</p>}
+      </div>
+      <div className="sm:self-end ">
+        <button
+          className="rounded bg-blue-700 text-white py-5 px-2 w-16 lg:relative lg:-mr-64 "
+          onClick={handleNext}
+        >
+          {" "}
+          NEXT
+        </button>{" "}
+      </div>
     </div>
-     
-    </div>
-  )
+  );
 }
 
 export default HomeComponent

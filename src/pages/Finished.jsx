@@ -5,8 +5,8 @@ import FinishedComponent from '../components/FinishedComponent';
 
 const Finished = () => {
   return (
-    <div className='flex flex-row ml-[13rem]'>
-        <Sidebar />
+    <div className='flex flex-row sm:flex-col '>
+        
         <FinishedComponent/>
       
        

@@ -6,13 +6,15 @@ import HomeComponent from '../components/Home-component';
 const Home = () => {
     
   return (
-    <div className='flex flex-row ml-36' >
-        <SideBar />
-        <HomeComponent />
 
-       
-    </div>
-  )
+      <div className="sm:flex lg:flex-row sm:flex-col  sm:items-center sm:justify-center">
+        <SideBar />
+        <div className='sm:flex sm:flex-col sm:items-center sm:justify-center'>
+          <HomeComponent />
+        </div>
+      </div>
+    
+  );
 }
 
 export default Home

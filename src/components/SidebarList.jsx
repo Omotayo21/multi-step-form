@@ -6,13 +6,13 @@ const SidebarList = ({num, text, path}) => {
   return (
     < div className='-mb-6'>
        
-    <div className="flex items-center lg:gap-4  ">
+    <div className="flex  items-center gap-4  ">
       <div
         className={`${
            location.pathname === path
             ? "bg-blue-400 border-blue-500 "
             : "border-white bg-transparent"
-        }  h-[2.3rem] w-[2.3rem] rounded-full flex items-center justify-center border `}
+        }  h-[2.1rem] w-[2.1rem] rounded-full flex items-center justify-center border`}
       >
         <p
           className={`${
@@ -22,9 +22,9 @@ const SidebarList = ({num, text, path}) => {
           {num}
         </p>
       </div>
-      <ul className="lg:flex lg:flex-col sm:hidden">
+      <ul className="lg:flex flex-col sm:hidden ">
         <li className="text-gray-200 text-sm uppercase">Step {num}</li>
-        <li className="text-[0.8rem] text-white font-bold uppercase ">
+        <li className="text-[0.7rem] text-white font-bold uppercase  ">
           {text}
         </li>
       </ul>

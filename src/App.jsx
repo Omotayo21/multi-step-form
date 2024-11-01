@@ -12,7 +12,7 @@ const Finished = lazy(() =>import ('./pages/Finished'));
 function App(){
  return(
 <>
-<div className=' lg:border-2 lg:rounded-[0.8rem] lg:border-black-200 lg:flex lg:flex-col lg:items-center lg:justify-center lg:bg-white-500 lg:w-8/12 lg:ml-64 lg:h-[40.4rem] lg:mt-4 lg:pt-24  '>
+<div className=' border-2 rounded-[0.8rem] border-black-200 flex flex-col items-center justify-center bg-white-500 lg:w-8/12 lg:ml-64 h-[40.4rem] lg:mt-4 lg:pt-24  '>
  <Router>
         
          <Suspense fallback={ <Spinner /> }>

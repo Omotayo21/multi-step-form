@@ -4,7 +4,7 @@ import AddonsComponent from '../components/AddonsComponent';
 
 const Addons = () => {
   return (
-    <div className='flex flex-row ml-44 '>
+    <div className='flex lg:flex-row lg:ml-44 sm:flex-col '>
         <Sidebar />
         <AddonsComponent />
       

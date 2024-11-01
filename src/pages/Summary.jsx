@@ -4,7 +4,7 @@ import SummaryComponent from '../components/SummaryComponent';
 
 const Summary = () => {
   return (
-    <div className='flex flex-row ml-48'>
+    <div className='flex lg:flex-row lg:ml-[14rem] sm:flex-col'>
         <Sidebar />
      <SummaryComponent />
     </div>
